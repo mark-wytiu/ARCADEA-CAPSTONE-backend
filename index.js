@@ -1,54 +1,21 @@
 const express = require("express");
-const router = express.Router();
-const fs = require("fs");
-const uniqid = require("uniqid");
+const app = express();
+const gameRoutes = require("./Routes/game.js");
+require("dotenv").config();
+const cors = require("cors");
+const PORT = process.env.PORT || 5051;
+console.log(process.env.PORT);
 
-function readGame() {
-	const gameData = fs.readFileSync("./Data/Allgames.json");
-	const parseData = JSON.parse(gameData);
-	return parseData;
-}
+app.use(cors());
 
-router.get("/", (_req, res) => {
-	const games = readGame();
-	const listOfGames = games.map((game) => {
-		return {
-			id: game.id,
-			title: game.title,
-			genre: game.genre,
-			image: game.image,
-			developer: game.developer,
-			platforms: game.platforms,
-			description: game.description,
-		};
-	});
-	res.json(listOfGames);
+app.use(express.json());
+
+// app.use("/static-files", express.static("public"));
+
+app.use("/games", gameRoutes);
+
+
+
+app.listen(PORT, () => {
+	console.log(`Server listening on port ${PORT}`);
 });
-
-
-router.get("/game/:id", (req, res) => {
-	const games1 = readGame();
-	const singleGame = games1.find(
-		(game) => game.id === req.params.gameId
-	);
-
-	res.json(singleGame);
-});
-
-
-
-router.post("/", (req, res) => {
-	const newGame = {
-		id: uniqid(),
-		title: req.body.title,
-		description: req.body.description,
-	};
-
-	const postVideo = readData();
-	postVideo.push(newVideo);
-	fs.writeFileSync("./data/video.json", JSON.stringify(postVideo));
-
-	res.status(201).json(newVideo);
-});
-
-module.exports = router;
