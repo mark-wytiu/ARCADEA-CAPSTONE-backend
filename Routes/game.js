@@ -27,7 +27,7 @@ router.get("/", (_req, res) => {
 });
 
 
-router.get("/game/:id", (req, res) => {
+router.get("/:id", (req, res) => {
 	const games1 = readGame();
 	const singleGame = games1.find(
 		(game) => game.id == req.params.id

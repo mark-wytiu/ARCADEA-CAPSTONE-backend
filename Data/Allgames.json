@@ -428,10 +428,7 @@
 		"platforms": ["PC", "Xbox One", "PlayStation 4"],
 		"description": "Form a squad and battle it out in this free-to-play battle royale game from the creators of Titanfall."
 	},
-	{
-		"id": "5qp507luvs818o",
-		"title": "Half-Life: Alyx",
-		"genre": "VR Action-Adventure",
-		"platforms": ["PC (VR)"]
-	}
+	{ "id": "5qpcqrlux50ils", "title": "vzv", "genre": "szdf" },
+	{ "id": "5qpczglux51eod", "title": "asdfasdfvzv", "genre": "szdfasdfasdf" },
+	{ "id": "5qpfr5luxt4lhw", "title": "dsdds", "genre": "sddsds" }
 ]
