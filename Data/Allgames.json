@@ -56,7 +56,7 @@
 	},
 	{
 		"id": 6,
-		"title": "Fortnite",
+		"title": "Fortnite",	
 		"genre": "Battle Royale",
 		"image": "./Game-Images/fortnite.png",
 		"releaseDate": "2017-07-25",
@@ -430,5 +430,6 @@
 	},
 	{ "id": "5qpcqrlux50ils", "title": "vzv", "genre": "szdf" },
 	{ "id": "5qpczglux51eod", "title": "asdfasdfvzv", "genre": "szdfasdfasdf" },
-	{ "id": "5qpfr5luxt4lhw", "title": "dsdds", "genre": "sddsds" }
+	{ "id": "5qpfr5luxt4lhw", "title": "dsdds", "genre": "sddsds" },
+	{ "id": "5qp16dolv3c75e8", "title": "Game", "genre": "gsssds" }
 ]
