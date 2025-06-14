@@ -44,7 +44,14 @@ router.post("/", (req, res) => {
 		id: uniqid(),
 		title: req.body.title,
 		genre: req.body.genre,
-		platforms: req.body.platforms,
+		image: req.body.image || "",
+		releaseDate: req.body.releaseDate,
+		price: req.body.price ? req.body.price.toString() : "0",
+		developer: req.body.developer || "",
+		platforms: req.body.platform ? [req.body.platform] : [],
+		description: req.body.description || "",
+		publisher: req.body.publisher || "",
+		rating: req.body.rating || 0
 	};
 
 	const postGame = readGame();
