@@ -1,3 +1,4 @@
+const path = require("path");
 const express = require("express");
 const app = express();
 const gameRoutes = require("./Routes/game.js");
@@ -24,6 +25,8 @@ app.get("/health", (req, res) => {
 });
 
 // app.use("/static-files", express.static("public"));
+
+app.use("/Game-Images", express.static(path.join(__dirname, "Game-Images")));
 
 app.use("/games", gameRoutes);
 
